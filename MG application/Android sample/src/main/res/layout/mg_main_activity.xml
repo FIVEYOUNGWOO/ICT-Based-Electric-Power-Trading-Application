@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MG_Main_Activity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mAddBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:tint="@color/white"
+        app:backgroundTint="#1A76B9"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/sub_book"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mAddTimebase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:tint="@color/white"
+        app:backgroundTint="#03A9F4"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/mAddBook"
+        app:layout_constraintEnd_toEndOf="@+id/mAddBook"
+        app:layout_constraintStart_toStartOf="@+id/mAddBook"
+        app:srcCompat="@drawable/sub_time"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mAddMonthbase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/btnbg"
+        android:tint="@color/white"
+        app:backgroundTint="#00BCD4"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/mAddTimebase"
+        app:layout_constraintEnd_toEndOf="@+id/mAddTimebase"
+        app:layout_constraintStart_toStartOf="@+id/mAddTimebase"
+        app:srcCompat="@drawable/sub_month"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <Button
+        android:id="@+id/Bluetooth"
+        android:layout_width="26sp"
+        android:layout_height="34sp"
+        android:background="#00ff0000"
+        android:drawableLeft="@drawable/setting_button"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:src="@drawable/encoredpnp"
+        android:background="#00ffffff"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0sp"
+        tools:layout_editor_absoluteY="143sp" />
+
+    <TextView
+        android:id="@+id/textVieW"
+        android:layout_width="110sp"
+        android:layout_height="26sp"
+        android:layout_marginTop="12sp"
+        android:text="남은 전력 사용량 : "
+        android:textAlignment="center"
+        android:textSize="14.5sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/DB_value"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/DB_value"
+        android:layout_width="wrap_content"
+        android:layout_height="26sp"
+        android:layout_marginTop="12dp"
+        android:bufferType="editable"
+        android:text=""
+        android:hint="연결 중..."
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:textSize="14.5sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/RefreshDB"
+        android:layout_width="24sp"
+        android:layout_height="21sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="12dp"
+        android:background="#00ff0000"
+        android:drawableLeft="@drawable/update_button"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/DB_value"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <!--
+    //additive code
+    -->
+    <TextView
+        android:id="@+id/temp_text"
+        android:layout_width="110sp"
+        android:layout_height="26sp"
+        android:layout_marginTop="12sp"
+        android:text="오늘의 발전 날씨 : "
+        android:textAlignment="center"
+        android:textSize="14.5sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/DB_value"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textVieW"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/temp_text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="26sp"
+        android:layout_marginTop="12dp"
+        android:bufferType="editable"
+        android:text="매우 좋음"
+        android:textColor="@color/blue"
+        android:textSize="14.5sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DB_value" />
+
+
+    <Button
+        android:id="@+id/temp_button"
+        android:layout_width="24sp"
+        android:layout_height="21sp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#00ff0000"
+        android:drawableLeft="@drawable/sunny_png"
+        android:gravity="center"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/temp_text_2"
+        app:layout_constraintTop_toBottomOf="@+id/RefreshDB"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25sp"
+        android:layout_marginTop="104sp"
+        android:background="#EAEDF2"
+        android:gravity="center"
+        android:text="AI 분석결과 12일 후에 전력 구매가 필요합니다!"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="14.5sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/Userinfo"
+        android:layout_width="186sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5sp"
+        android:text="사용자 메뉴"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_corner"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Purchase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Purchase"
+        android:layout_width="186sp"
+        android:layout_height="48sp"
+        android:layout_marginBottom="104sp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/blue"
+        android:text="전력 구매 요청"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

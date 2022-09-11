@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8sp"
+            android:text="연결중인 디바이스 : "
+            android:textSize="16sp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/connection_status_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8sp"
+            android:text=""
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/input_string_edittext"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:hint="임의의 문자열을 입력해주세요."
+            android:textSize="14sp"
+            android:minHeight="48dp"/>
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginRight="4sp"
+            android:layout_weight="0.2"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/blue"
+            android:text="Send"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_margin="8sp"
+        android:textStyle="bold"
+        android:text="클라이언트-서버 통신 결과"
+        android:textColor="@color/blue"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16sp"
+        android:layout_marginRight="16sp"
+        android:text="SPP 서버 최초 접속 시, 남은 전력량(kWh)을 반환합니다.\n60초 간격으로 해당 값은 자동으로 갱신됩니다." />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="false"
+        android:id="@+id/message_listview" />
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.borax12.mg_project" >
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo_basic"
+        android:label="MG_ENCORED_PNP"
+        android:roundIcon="@drawable/ic_logo_basic"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.borax12.mg_project.fetchdata"></activity>
+        <activity android:name="com.borax12.mg_project.MG_Main_Activity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- application 영역이 끝나기 전, 다음 엑티비티 순서를 순서대로 넣어주면 됨-->
+
+        <activity android:name="com.borax12.mg_project.BLE_1_Activity"/>
+        <activity android:name="com.borax12.mg_project.BLE_2_Activity"/>
+        <activity android:name="com.borax12.mg_project.PURCHASE_1_Activity"/>
+        <activity android:name="com.borax12.mg_project.PURCHASED_1_Activity"/>
+        <activity android:name="com.borax12.mg_project.TRACKER_1_Activity"/>
+        <activity android:name="com.borax12.mg_project.USERINFO_1_Activity"/>
+    </application>
+
+</manifest>

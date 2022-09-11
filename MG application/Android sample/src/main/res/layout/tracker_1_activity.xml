@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#EAEDF2"
+        android:gravity="center"
+        android:text="수집된 MG 전력의 데이터베이스를 시각화합니다."
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="14.5dp"
+        android:textStyle="bold" />
+
+    <!--chart legend setting-->
+    <LinearLayout
+        android:id="@+id/legend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/legend10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="3sp"
+            android:padding="5dp"
+            android:text=" Power"
+            android:textColor="#1a76b9"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/legend2_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="3sp"
+            android:padding="5dp"
+            android:text=" Expected"
+            android:textColor="#2DA7AD"
+            android:textSize="11sp"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="290sp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <view
+            android:id="@+id/line_view"
+            class="im.dacer.androidcharts.LineView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center" />
+    </HorizontalScrollView>
+
+
+    <!--고정 값 넣을 분량-->
+    <LinearLayout
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp">
+
+        <ImageView
+            android:layout_marginTop="7sp"
+            android:id="@+id/imageview_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="73sp"
+            app:srcCompat="@drawable/time_logo">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/connection_status_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8sp"
+            android:text="2021.11.01 ~ 2021.11.30"
+            android:textColor="@color/grey"
+            android:layout_gravity="center"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="300sp"
+        android:layout_marginBottom="3sp"
+        android:layout_height="1.5sp"
+        android:background="@color/grey"
+        android:layout_gravity="center">
+    </View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12sp"
+        android:text="89,000 원"
+        android:bufferType="editable"
+        android:layout_gravity="center"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/remain"
+        android:bufferType="editable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8sp"
+        android:text= "0.00 kWh"
+        android:layout_gravity="center">
+    </TextView>
+
+    <View
+        android:layout_width="300sp"
+        android:layout_marginTop="14sp"
+        android:layout_marginBottom="2sp"
+        android:layout_height="1.5sp"
+        android:background="@color/grey"
+        android:layout_gravity="center">
+    </View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="8sp"
+        android:layout_gravity="center"
+        android:text="이때 사용량이 급증하였습니다!" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/expand_logo">
+    </ImageView>
+
+    <LinearLayout
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="목요일, 오후 7시 ~ 오후 10시"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:textAlignment="center">
+        </TextView>
+    </LinearLayout>
+</LinearLayout>

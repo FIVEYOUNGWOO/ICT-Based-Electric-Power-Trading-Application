@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#EAEDF2"
+        android:gravity="center"
+        android:text="인접 디바이스를 검색 및 페어링합니다."
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="14.5dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16sp"
+        android:textColor="@color/blue"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="210dp"
+        android:layout_marginBottom="5sp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
+        android:onClick="mOnBluetoothSearch"
+        android:background="@drawable/rounded_corner"
+        android:text="Searching"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/blueconnect"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
+        android:onClick="Button_add"
+        android:background="@drawable/rounded_corner"
+        android:text="Connect to latte"
+        android:textSize="14sp" />
+
+    <CheckBox
+        android:id="@+id/chkFindme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:buttonTint="#1a76b9"
+        android:onClick="mOnChkFindme"
+        android:text="외부 디바이스의 접근을 허용합니다."
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_margin="8sp"
+        android:text="페어링된 디바이스"
+        android:textColor="@color/blue"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16sp"
+        android:layout_marginRight="16sp"
+        android:text="이미 페어링된 디바이스는 자동 연결됩니다." />
+
+    <ListView
+        android:id="@+id/listPaired"
+        android:layout_width="match_parent"
+        android:layout_height="130sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="8sp"
+        android:text="연결 가능한 디바이스"
+        android:textColor="@color/blue"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16sp"
+        android:layout_marginRight="16sp"
+        android:text="연결하려는 디바이스가 다른 디바이스에서 검색할 수 있도록 허용된 디바이스인지 확인하세요." />
+
+    <ListView
+        android:id="@+id/listDevice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

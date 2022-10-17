@@ -1,4 +1,4 @@
-## Application-for-Electric-Power-ICT-Trading-System
+## ICT-based-Electric-Power-Trading-Application
 
 Implementation of electricity power payment application.
 
